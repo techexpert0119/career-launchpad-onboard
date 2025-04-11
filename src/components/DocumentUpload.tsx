@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { File, FileText, Upload, X } from "lucide-react";
+import { FileText, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
@@ -53,12 +53,12 @@ export const DocumentUpload = () => {
       description: "Your document has been uploaded and is awaiting approval.",
     });
     
-    // Simulate adding a new document
-    const newDoc = {
+    // Simulate adding a new document with a valid status type
+    const newDoc: Document = {
       id: String(documents.length + 1),
       name: "New Document.pdf",
       type: "Other",
-      status: "pending",
+      status: "pending", // Now explicitly using a valid literal value
       uploadedAt: new Date().toISOString().split("T")[0],
     };
     
@@ -72,12 +72,12 @@ export const DocumentUpload = () => {
       description: "Your document has been uploaded and is awaiting approval.",
     });
     
-    // Simulate adding a new document
-    const newDoc = {
+    // Simulate adding a new document with a valid status type
+    const newDoc: Document = {
       id: String(documents.length + 1),
       name: "New Document.pdf",
       type: "Other",
-      status: "pending",
+      status: "pending", // Now explicitly using a valid literal value
       uploadedAt: new Date().toISOString().split("T")[0],
     };
     
